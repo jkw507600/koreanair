@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;   
+    color: inherit;
+}
+
+body {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1280px;
+    background-color: orange;
+}
+
+.header {
+    display: flex;
+    height: 104px;
+    background-color: #fff;
+}
