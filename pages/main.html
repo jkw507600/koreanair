@@ -7,6 +7,7 @@
     <title>koreanair_main</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 
 <body>
@@ -14,24 +15,24 @@
         <div class="header">
             <div class="logo"><img src="../images/logo_korean_air.png" alt=""></div>
             <ul class="gnb">
-                <li><a href="">예약</a><i class="xi-angle-down-min"></i></li>
-                <li><a href="">공항</a><i class="xi-angle-down-min"></i></li>
-                <li><a href="">기내</a><i class="xi-angle-down-min"></i></li>
-                <li><a href="">스카이패스</a><i class="xi-angle-down-min"></i></li>
+                <li><a href="">예약</a><i class="xi-angle-down"></i></li>
+                <li><a href="">공항</a><i class="xi-angle-down"></i></li>
+                <li><a href="">기내</a><i class="xi-angle-down"></i></li>
+                <li><a href="">스카이패스</a><i class="xi-angle-down"></i></li>
             </ul>
             <div class="buttons">
-                <div class="button">
-                    <input type="text" id="search" name="" placeholder="궁금한 것을 검색해 보세요"> <i class="xi-search"></i>
+                <div class="btn">
+                    <input type="text" id="search" name="" placeholder="궁금한 것을 검색해 보세요"><i class="xi-search"></i>
                 </div>
-                <div class="login">로그인</div>
+                <div class="login" id="navybtn">로그인</div>
             </div>
         </div>
     </div>
     <div class="banner">
         <div class="wrap">
             <div class="booking">
-                <ul class="btns">
-                    <li><a href="">항공권 예매</a></li>
+                <ul class="mainbtns">
+                    <li class="active"><a href="">항공권 예매</a></li>
                     <li><a href="">예약 조회</a></li>
                     <li><a href="">체크인</a></li>
                     <li><a href="">항공편 현황</a></li>
@@ -39,7 +40,7 @@
                 <div class="contents">
                     <div class="upper">
                         <ul class="tab">
-                            <li><a href="">예매</a></li>
+                            <li><a href="" id="navybtn">예매</a></li>
                             <li><a href="">마일리지 예매</a></li>
                         </ul>
                         <div class="label">
