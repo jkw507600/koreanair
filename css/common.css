@@ -175,16 +175,36 @@ body {
     justify-content: space-between;
     border: 1px solid #d9d9d9;
     width: 224px;
-    padding: 8px 20px;
+    height: 38px;
+    line-height: 38px;
     border-radius: 30px;
     margin-left: 40px;
     margin-right: 60px;
 }
 
-.tab li:first-child #navybtn {
-    padding: 10px 18px;
+.tab li:first-child#navybtn {
+    padding: 9px 26px;
+}
+
+.tab li:last-child {
+    padding-right: 26px;
 }
 
 .booking .contents .down {
     display: flex;
+}
+
+.label {
+    display: flex;
+    gap: 32px;
+}
+.label span{
+    font-size: 18px;
+    color: #888;
+}
+.label span:first-child{
+    font-weight: bold;
+    color: var(--navy-color);
+    padding-bottom: 3px;
+    border-bottom: 3px solid #DE001B ;
 }
