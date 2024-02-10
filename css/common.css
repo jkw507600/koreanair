@@ -25,12 +25,22 @@ body {
 :root {
     --navy-color:#00256C;
     --mainbtns-color:#65728A;
+    --lightgray-color:#888888;
+}
+
+#navybtn {
+    background: var(--navy-color);
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: 35px;
+    font-weight: bold;
 }
 
 .wrap {
     margin: 0 auto;
     width: 1280px;
-    /* background-color: orange; */
 }
 
 /* header */
@@ -88,15 +98,6 @@ body {
     display: block;
 }
 
-#navybtn {
-    background: var(--navy-color);
-    padding: 6px 10px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.2;
-    border-radius: 35px;
-    font-weight: bold;
-}
 
 /* banner */
 
@@ -166,7 +167,7 @@ body {
 .booking .contents .upper {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 
 }
 
@@ -190,21 +191,98 @@ body {
     padding-right: 26px;
 }
 
-.booking .contents .down {
-    display: flex;
-}
-
 .label {
     display: flex;
     gap: 32px;
 }
 .label span{
     font-size: 18px;
-    color: #888;
+    color: var(--lightgray-color)
 }
 .label span:first-child{
     font-weight: bold;
     color: var(--navy-color);
     padding-bottom: 3px;
     border-bottom: 3px solid #DE001B ;
+}
+
+.down {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 45px;
+}
+
+.down > div {
+    padding-top: 42px;
+}
+
+.down .location{
+    display: flex;
+    gap: 37px;
+}
+.down .from, .down .to {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.down .to {
+    color: var(--lightgray-color)
+}
+
+.location img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.location h3{
+    font-size: 32px;
+    line-height: 2rem;
+    font-weight: bold;
+}
+.quickbooking {
+    margin-top: 10px;
+}
+.quickbooking p {
+    font-size: 14px;
+    color: var(--lightgray-color);
+}
+.quickbooking .form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #888888;
+}
+
+.down span{}
+
+.quickbooking.date{
+    width: 20%;
+}
+.quickbooking.person{
+    width: 12%;
+}
+.quickbooking.seat{
+    width: 15%;
+}
+
+.quickbooking.person .form, .quickbooking.seat .form{
+    justify-content: space-between;
+}
+
+.down .search{
+    width: 10%;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.down .search p#navybtn{
+    border-radius: 8px;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
 }
