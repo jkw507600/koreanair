@@ -26,6 +26,9 @@ body {
     --navy-color:#00256C;
     --mainbtns-color:#65728A;
     --lightgray-color:#888888;
+    --footerbackground-color:#F3F4F8;
+    --skyblue-color:#D0E7F6;
+    --lightblue-color:#E8F3FB;
 }
 
 #navybtn {
@@ -84,7 +87,7 @@ body {
     background-color: #f4f4f4;
     border: none;
     border-radius: 30px;
-    padding: 10px 24px;
+    padding: 10px 28px 10px 20px;
     margin-right: 15px;
 }
 
@@ -96,6 +99,7 @@ body {
 
 .buttons .login {
     display: block;
+    cursor: pointer;
 }
 
 
@@ -394,4 +398,98 @@ body {
 
 .app p {
     font-size: 14px;
+}
+
+.notice.icons {
+    width: 100%;
+    height: 303px;
+    background: var(--skyblue-color);
+}
+
+.notice.icons h2 {
+    padding-top: 55px;
+}
+
+.notice.icons .group {
+    display: flex;
+    gap: 20px;
+}
+
+.group .itembox {
+    width: 197px;
+    height: 131px;
+    border-radius: 18px;
+    background: var(--lightblue-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.itembox h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.itembox img {
+    /* display: block; */
+}
+
+.footer {
+    height: 270px;
+    background: var(--footerbackground-color);
+}
+.footer .f_des {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 0;
+    margin-right: 25%;
+}
+
+.f_des .des {
+    
+}
+
+.f_des .des h4 {
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+
+.des p {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+    padding: 4px 0;
+}
+
+.f_info {
+    height: 126px;
+    padding: 18px 0;
+}
+
+.f_info span:first-child {
+    font-size: 14px;
+    color: var(--navy-color);
+}
+.f_info span {
+    font-size: 12px;
+    color: #555;
+}
+
+.f_info p {
+    padding-top: 28px;
+    font-size: 12px;
+    color: #555;
+}
+
+body {
+    position: relative;
+}
+
+.floating_button {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    position: absolute;
+    bottom: -97px;
+    right: 35px;
 }
