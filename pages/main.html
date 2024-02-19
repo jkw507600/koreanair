@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -73,12 +74,12 @@
         <div class="wrap">
             <div class="booking">
                 <ul class="mainbtns">
-                    <li class="active"><a href="">항공권 예매</a></li>
-                    <li><a href="">예약 조회</a></li>
-                    <li><a href="">체크인</a></li>
-                    <li><a href="">항공편 현황</a></li>
+                    <li class="active" id="btn-1"><a href="">항공권 예매</a></li>
+                    <li id="btn-2"><a href="">예약 조회</a></li>
+                    <li id="btn-3"><a href="">체크인</a></li>
+                    <li id="btn-4"><a href="">항공편 현황</a></li>
                 </ul>
-                <div class="contents">
+                <div class="contents" id="tabpanel-1">
                     <div class="upper">
                         <ul class="tab">
                             <li id="navybtn" ><a href="">예매</a></li>
@@ -127,6 +128,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="contents" id="tabpanel-2"></div>
+            </div>
+            <div class="modal">
+                <h2>도착지 검색</h2>
+                <h4>부산</h4>
+
             </div>
         </div>
     </div>
@@ -251,5 +258,23 @@
         <img src="../images/icon_up_4.png" alt="">
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+    // 초기에 모든 sub 메뉴를 숨김
+    $(".gnb .sub").hide();
+
+    // 메뉴 항목에 호버 효과 적용
+    $(".gnb > li").hover(
+        function() {
+            // 호버한 메뉴 항목의 하위에 있는 sub 메뉴를 보여줌
+            $(this).find('.sub').stop().slideDown();
+        },
+        function() {
+            // 마우스가 벗어난 경우 sub 메뉴를 숨김
+            $(this).find('.sub').stop().slideUp();
+        }
+    );
+});
+</script>
 
 </html>
