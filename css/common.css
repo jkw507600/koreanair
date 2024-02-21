@@ -30,6 +30,7 @@ body {
     --footerbackground-color:#F3F4F8;
     --skyblue-color:#D0E7F6;
     --lightblue-color:#E8F3FB;
+    --clearblue-color:#0064DE;
 }
 
 #navybtn {
@@ -196,6 +197,7 @@ body {
 .banner .booking {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .banner .booking .mainbtns {
     display: flex;
@@ -242,8 +244,67 @@ body {
     background-color: #fff;
     border-radius: 20px;
     z-index: 10;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+
+}
+
+.contents#tabpanel-2 {
+    /* display: none; */
+    position: absolute;
+    top: 300px;
+    left: 222px;
+    width: 750px;
+    height: 380px;
+    background-color: #fff;
+}
+
+.contents .modal {
+    padding: 40px 60px;
+    position: relative;
+}
+
+.modal .title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+
+.modal .title h2 {
+    font-size: 24px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 18px 25px;
+    font-size: 18px;
+    border: 3px solid  var(--clearblue-color) ;
+}
+
+.modal > i {
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.modal .location {
+    display: flex;
+    width: 100%;
+    padding: 18px 25px;
+    background-color:#fff;
+    font-size: 18px;
+    align-items: center;
+    gap: 26px;
+    box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 100px;
+}
+
+.modal span {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .booking .contents .upper {

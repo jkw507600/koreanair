@@ -17,7 +17,9 @@
             <div class="logo"><img src="../images/logo_korean_air.png" alt=""></div>
             <ul class="gnb">
                 <li>
-                    <a href=""><p>예약</p><i class="xi-angle-down"></i></a>
+                    <a href="">
+                        <p>예약</p><i class="xi-angle-down"></i>
+                    </a>
                     <ul class="sub">
                         <li class="inner">
                             <a href="">예약 가이드</a>
@@ -58,9 +60,15 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href=""><p>공항</p><i class="xi-angle-down"></i></a></li>
-                <li><a href=""><p>기내</p><i class="xi-angle-down"></i></a></li>
-                <li><a href=""><p>스카이패스</p><i class="xi-angle-down"></i></a></li>
+                <li><a href="">
+                        <p>공항</p><i class="xi-angle-down"></i>
+                    </a></li>
+                <li><a href="">
+                        <p>기내</p><i class="xi-angle-down"></i>
+                    </a></li>
+                <li><a href="">
+                        <p>스카이패스</p><i class="xi-angle-down"></i>
+                    </a></li>
             </ul>
             <div class="buttons">
                 <div class="btn">
@@ -82,7 +90,7 @@
                 <div class="contents" id="tabpanel-1">
                     <div class="upper">
                         <ul class="tab">
-                            <li id="navybtn" ><a href="">예매</a></li>
+                            <li id="navybtn"><a href="">예매</a></li>
                             <li><a href="">마일리지 예매</a></li>
                         </ul>
                         <div class="label">
@@ -97,7 +105,7 @@
                                 <span>서울</span>
                             </div>
                             <img src="../images/icon_round.png" alt="">
-                            <div class="to">
+                            <div class="to" href="">
                                 <h3>TO</h3>
                                 <span>도착지</span>
                             </div>
@@ -128,12 +136,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="contents" id="tabpanel-2"></div>
-            </div>
-            <div class="modal">
-                <h2>도착지 검색</h2>
-                <h4>부산</h4>
-
+                <div class="contents" id="tabpanel-2">
+                    <div class="modal">
+                        <div class="title">
+                            <h2>도착지 검색</h2>
+                            <i class="xi-close"></i>
+                        </div>
+                        <input type="text" id="search" name="" placeholder="부산"><i class="xi-close-circle"></i>
+                        <div class="location"><img src="../images/icon_airplane.svg" alt=""> <Strong>PUS</Strong>
+                            <p>부산/김해, 대한민국</p>
+                        </div>
+                        <span><i class="xi-maker"></i>모든 지역 보기</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -156,10 +171,18 @@
             <h2>알려드립니다</h2>
             <div class="board">
                 <ul class="texts">
-                    <li><a href=""><strong>금융기관 시스템 작업 (하나카드, 11/18)</strong><p>2023.11.15</p></a></li>
-                    <li><a href=""><strong>카드사 시스템 작업 ( VISA, MASTER, JCB, 11/18 한국시간 기준)</strong><p>2023.11.14</p></a></li>
-                    <li><a href=""><strong>동남아 노선 신규 취향 및 단거리 노선 재운항 안내</strong><p>2023.11.09</p></a></li>
-                    <li><a href=""><strong>국내선 유류할증료 (2023년 12월)</strong><p>2023.11.02</p></a></li>
+                    <li><a href=""><strong>금융기관 시스템 작업 (하나카드, 11/18)</strong>
+                            <p>2023.11.15</p>
+                        </a></li>
+                    <li><a href=""><strong>카드사 시스템 작업 ( VISA, MASTER, JCB, 11/18 한국시간 기준)</strong>
+                            <p>2023.11.14</p>
+                        </a></li>
+                    <li><a href=""><strong>동남아 노선 신규 취향 및 단거리 노선 재운항 안내</strong>
+                            <p>2023.11.09</p>
+                        </a></li>
+                    <li><a href=""><strong>국내선 유류할증료 (2023년 12월)</strong>
+                            <p>2023.11.02</p>
+                        </a></li>
                 </ul>
                 <div class="photo">
                     <img src="../images/board_img.jpg" alt="">
@@ -259,22 +282,22 @@
     </div>
 </body>
 <script>
-    $(document).ready(function() {
-    // 초기에 모든 sub 메뉴를 숨김
-    $(".gnb .sub").hide();
+    $(document).ready(function () {
+        // 초기에 모든 sub 메뉴를 숨김
+        $(".gnb .sub").hide();
 
-    // 메뉴 항목에 호버 효과 적용
-    $(".gnb > li").hover(
-        function() {
-            // 호버한 메뉴 항목의 하위에 있는 sub 메뉴를 보여줌
-            $(this).find('.sub').stop().slideDown();
-        },
-        function() {
-            // 마우스가 벗어난 경우 sub 메뉴를 숨김
-            $(this).find('.sub').stop().slideUp();
-        }
-    );
-});
+        // 메뉴 항목에 호버 효과 적용
+        $(".gnb > li").hover(
+            function () {
+                // 호버한 메뉴 항목의 하위에 있는 sub 메뉴를 보여줌
+                $(this).find('.sub').stop().slideDown();
+            },
+            function () {
+                // 마우스가 벗어난 경우 sub 메뉴를 숨김
+                $(this).find('.sub').stop().slideUp();
+            }
+        );
+    });
 </script>
 
 </html>
