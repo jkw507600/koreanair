@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -135,19 +138,20 @@
                             <p id="navybtn">항공편 검색</p>
                         </div>
                     </div>
-                </div>
-                <div class="contents" id="tabpanel-2">
-                    <div class="modal">
+                    <div id="myModal" class="modal">
                         <div class="title">
                             <h2>도착지 검색</h2>
-                            <i class="xi-close"></i>
+                            <i id="close" class="xi-close"></i>
                         </div>
-                        <input type="text" id="search" name="" placeholder="부산"><i class="xi-close-circle"></i>
+                        <input type="text" id="search" name="" placeholder="부산">
+                        <i class="xi-close-circle"></i>
                         <div class="location"><img src="../images/icon_airplane.svg" alt=""> <Strong>PUS</Strong>
                             <p>부산/김해, 대한민국</p>
                         </div>
                         <span><i class="xi-maker"></i>모든 지역 보기</span>
                     </div>
+                </div>
+                <div class="contents" id="tabpanel-2">
                 </div>
             </div>
         </div>
@@ -297,6 +301,16 @@
                 $(this).find('.sub').stop().slideUp();
             }
         );
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $(".to").click(function(){
+            $("#myModal").css("display", "block");
+        });
+        $("#close").click(function(){
+            $("#myModal").css("display", "none");
+        });
     });
 </script>
 
