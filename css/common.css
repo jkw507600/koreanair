@@ -253,6 +253,7 @@ body {
 } 
 
 .contents .modal {
+    display: none;
     position: absolute;
     z-index: 100;
     top: 250px;
@@ -274,7 +275,7 @@ body {
     font-size: 24px;
 }
 
-.modal .title > i {
+.modal .title #close {
     cursor: pointer;
     font-weight: bold;
 }
@@ -301,7 +302,7 @@ body {
     cursor: pointer;
 }
 
-.modal .location {
+.modal .pusan {
     display: flex;
     width: 100%;
     padding: 18px 25px;

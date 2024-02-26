@@ -108,7 +108,7 @@
                                 <span>서울</span>
                             </div>
                             <img src="../images/icon_round.png" alt="">
-                            <div class="to" href="">
+                            <div class="to" href="" id="openModalBtn">
                                 <h3>TO</h3>
                                 <span>도착지</span>
                             </div>
@@ -145,7 +145,7 @@
                         </div>
                         <input type="text" id="search" name="" placeholder="부산">
                         <i class="xi-close-circle"></i>
-                        <div class="location"><img src="../images/icon_airplane.svg" alt=""> <Strong>PUS</Strong>
+                        <div class="pusan"><img src="../images/icon_airplane.svg" alt=""> <Strong>PUS</Strong>
                             <p>부산/김해, 대한민국</p>
                         </div>
                         <span><i class="xi-maker"></i>모든 지역 보기</span>
@@ -305,13 +305,23 @@
 </script>
 <script>
     $(document).ready(function(){
-        $(".to").click(function(){
+        // 모달 열기
+        $("#openModalBtn").click(function(){
             $("#myModal").css("display", "block");
         });
+    
+        // 모달 닫기
         $("#close").click(function(){
             $("#myModal").css("display", "none");
         });
+    
+        // 모달 영역 외의 부분 클릭 시 모달 닫기
+        $(window).click(function(event){
+            if (event.target == $("#myModal")[0]) {
+                $("#myModal").css("display", "none");
+            }
+        });
     });
-</script>
+    </script>
 
 </html>
